@@ -1,0 +1,57 @@
+<html>
+    <head>
+        <title>PROGRAM KALKULATOR</title>
+        <script language="Javascript">
+            document.write ("Modifikasi terakhir pada : " + document.lastModified)
+
+            function tambah(){
+                var bil1= parseFloat(document.kalkulator.bil1.value);
+                var bil2 = parseFloat(document.kalkulator.bil2.value);
+                var hasil = bil1 + bil2
+                document.kalkulator.hasil.value= hasil;
+            }
+            function kurang(){
+                var bil1 = parseFloat(document.kalkulator.bil1.value);
+                var bil2 = parseFloat(document.kalkulator.bil2.value);
+                var hasil = bil1 - bil2
+                document.kalkulator.hasil.value = hasil;
+            }
+            function perkalian (){
+                var bil1 = parseFloat(document.kalkulator.bil1.value);
+                var bil2 = parseFloat(document.kalkulator.bil2.value);
+                var hasil = bil1 * bil2
+                document.kalkulator.hasil.value = hasil;
+            }
+            function pembagian(){
+                var bil1 = parseFloat(document.kalkulator.bil1.value);
+                var bil2 = parseFloat(document.kalkulator.bil2.value);
+                var hasil = bil1 / bil2
+                document.kalkulator.hasil.value = hasil;
+
+            }
+            function resetkalkulator(){
+                document.kalkulator.reset();
+            }
+        </script>
+    </head>
+    <body>
+        <h1>PROGRAM KALKULATOR</h1>
+        <form action="text" name="kalkulator">
+            Bilangan 1 :
+            <input type="text" name="bil1" id="">
+            <br><br>
+            Bilangan 2 :
+            <input type="text" name="bil2" id="">
+            <br><br>
+            Hasil :
+            <input type="text" name="hasil" id="">
+            <br><br>
+            <h2>Operasi Kalkulator</h2>
+            <input type="button" value="(+)" onclick="tambah()">
+            <input type="button" value="(-)" onclick="kurang()">
+            <input type="button" value="(x)" onclick="perkalian()">
+            <input type="button" value="(/)" onclick="pembagian()">
+            <input type="button" value="HAPUS" onclick="resetkalkulator()">
+        </form>
+    </body>
+</html>
